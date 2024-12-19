@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const pool = require('../db');
+const pool = require('./db.js');
 
 // Obtener todas las relaciones persona-vivienda
 router.get('/', async (req, res) => {
