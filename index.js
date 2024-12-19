@@ -22,8 +22,9 @@ const relacionRoutes = require('./relacion.js');
 
 // Middlewares
 app.use(bodyParser.json());
-app.use(cors());
-//app.use(express.static(path.join(__dirname, "/UN - MATERIAS PRACTICAS/INGE SOFTWARE II/lab0-2/lab0-ingesfot2/lab0-front/dist")))
+app.use(cors({
+    origin: 'hhttps://back-lab0.onrender.com' // Reemplaza con el dominio de tu front-end desplegado
+  }));
 
 
 // Usar rutas
