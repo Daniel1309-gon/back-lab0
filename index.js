@@ -22,9 +22,17 @@ const relacionRoutes = require('./relacion.js');
 
 // Middlewares
 app.use(bodyParser.json());
+const allowedOrigins = ['https://front-lab0.onrender.com'];
+
 app.use(cors({
-    origin: 'hhttps://back-lab0.onrender.com' // Reemplaza con el dominio de tu front-end desplegado
-  }));
+  origin: function(origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 
 
 // Usar rutas
