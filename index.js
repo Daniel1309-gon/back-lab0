@@ -23,7 +23,7 @@ const relacionRoutes = require('./relacion.js');
 // Middlewares
 app.use(bodyParser.json());
 app.use(cors());
-//app.use(express.static(path.join(__dirname, "C:/Users/danig/Documents/UN - MATERIAS PRACTICAS/INGE SOFTWARE II/lab0-2/lab0-ingesfot2/lab0-front/dist")))
+//app.use(express.static(path.join(__dirname, "/UN - MATERIAS PRACTICAS/INGE SOFTWARE II/lab0-2/lab0-ingesfot2/lab0-front/dist")))
 
 
 // Usar rutas
